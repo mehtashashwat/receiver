@@ -17,6 +17,7 @@ public class ReceiverApplication {
 		SpringApplication.run(ReceiverApplication.class, args);
 		ConnectionFactory factory = new ConnectionFactory();
 		factory.setHost("localhost");
+		factory.setVirtualHost("/hello");
 		Connection connection = factory.newConnection();
 		Channel channel = connection.createChannel();
 
